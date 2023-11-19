@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
         int choice = 0;
         Film film15 = new Film("Терминатор 2: Судный день",Year.of(1991),8.7f,95087);
         Film film2 = new Film("Побег из Шоушенка",Year.of(1994),9.0f,121231);
