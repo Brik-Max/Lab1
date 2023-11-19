@@ -52,14 +52,14 @@ public class Main {
             case 1:     for (int i = 0; i < list.length; i++){ // по алфавиту
                         int j_max = i;
                             for(int j = i+1; j < list.length; j++){
-                                if(list[j_max].name.charAt(0) < list[j].name.charAt(0)){
+                                if(list[j].name.charAt(0) < list[j_max].name.charAt(0)){
                                     j_max = j;
                                 }
                             }
                         Film temp = list[i];
                         list[i] = list[j_max];
                         list[j_max] = temp;
-                        }
+                        } break;
 
             case 2:     for (int i = 0; i < list.length; i++){ // по году
                         int j_max = i;
@@ -71,7 +71,7 @@ public class Main {
                         Film temp = list[i];
                         list[i] = list[j_max];
                         list[j_max] = temp;
-                        }
+                        } break;
 
             case 3:     for (int i = 0; i < list.length; i++){ // по оценке
                         int j_max = i;
@@ -83,7 +83,7 @@ public class Main {
                         Film temp = list[i];
                         list[i] = list[j_max];
                         list[j_max] = temp;
-                        }
+                        } break;
 
             case 4:     for (int i = 0; i < list.length; i++){ // по просмотрам
                         int j_max = i;
@@ -95,8 +95,8 @@ public class Main {
                         Film temp = list[i];
                         list[i] = list[j_max];
                         list[j_max] = temp;
-                        }
-            default:
+                        } break;
+            default: break;
         }
 
         try(FileWriter writer = new FileWriter("Films.txt", false))
